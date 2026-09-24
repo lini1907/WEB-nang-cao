@@ -1,0 +1,3 @@
+import { Component } from '@angular/core'; import { ActivatedRoute,Router } from '@angular/router'; import { ProductService } from '../product.service'; import { Product } from '../product';
+@Component({selector:'app-product-detail',templateUrl:'./product-detail.html',styleUrl:'./product-detail.css',standalone:false})
+export class ProductDetailComponent { selectedProduct?:Product; constructor(route:ActivatedRoute,service:ProductService,private router:Router){const id=route.snapshot.paramMap.get('id'); if(id)this.selectedProduct=service.getProductDetail(id);} goBack(){this.router.navigate(['/service-product-image-event']);} }
