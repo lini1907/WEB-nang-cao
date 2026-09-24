@@ -1,0 +1,2 @@
+import { NgModule,provideBrowserGlobalErrorListeners } from '@angular/core'; import { BrowserModule } from '@angular/platform-browser'; import { HttpClientModule } from '@angular/common/http'; import { App } from './app'; import { CustomerGroupsComponent } from './customer-groups/customer-groups';
+@NgModule({declarations:[App,CustomerGroupsComponent],imports:[BrowserModule,HttpClientModule],providers:[provideBrowserGlobalErrorListeners()],bootstrap:[App]}) export class AppModule {}
